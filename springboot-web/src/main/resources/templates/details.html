@@ -12,8 +12,11 @@
     <h2>Datos</h2>
     <ul>
 
-        <li> <p>nombre: <span th:text="${name}"></span> </p></li>
-        <li> <p>apellido: <span th:text="${lastname}"></span> </p></li>
+        <li> <p>nombre: <span th:text="${user.name}"></span> </p></li>
+        <li> <p>apellido: <span th:text="${user.lastname}"></span> </p></li>
+        
+        <li th:if="${user.email != null}"> <p>email: <span  th:text="${user.email}"></span> </p></li>
+        <li th:if="${user.email == null}">No se ha encontrado el email</li>
     </ul>
    
     
